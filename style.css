@@ -1,0 +1,132 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0e4877;
+    color: white;
+  }
+  
+  /* Header container */
+  .header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;   /*left, right, center or justify*/ 
+    padding: 10px 20px; 
+  } 
+  
+  /* Logo */    
+  .header img { 
+    height: 40px;
+  }
+  
+  /* Title */
+  .header h1 {
+    margin: 0;
+    font-size: 1.5em;  
+    color: white;
+  }
+
+  /* Language Switch */
+  .lang-switch {
+    position: absolute;
+    display: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    align-items: center;
+  }
+  
+  .lang-switch input[type="checkbox"] {
+    display: none;
+  }
+  
+  .lang-switch label {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 30px;
+    padding: 0px 8px;
+    cursor: pointer;
+    position: relative;
+    width: 70px;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    height: 30px;
+    box-sizing: border-box;
+  }
+  
+  .lang-switch .ball {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 25px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+    z-index: 1;
+  }
+  
+  .lang-switch .label-gr,
+  .lang-switch .label-en {
+    width: 50%;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  #toggle-lang:checked + label .ball {
+    transform: translateX(35px);
+  }
+  
+  .label-gr,
+  .label-en {
+    z-index: 2;
+  }
+
+  /* Navigation styling */
+  .nav-links {
+    list-style: none; 
+    display: flex; 
+    gap: 20px; /* space between the links */
+    padding: 0; 
+    margin: 10px 20px; 
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em; /* size of the text */
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #a8d0ff;
+  }
+  
+  /* Optional: style the horizontal line */
+  hr {
+    border: 0;
+    height: 1px;
+    background: white;
+    margin: 0 20px;
+  }
+  
+  main #welcome h2 {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: center; 
+  }
+
+  main #welcome p {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: justify; 
+  }
+
+  footer {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+  }

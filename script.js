@@ -1,0 +1,24 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("toggle-lang");
+
+    // Get saved language from localStorage
+    const savedLang = localStorage.getItem("lang");
+
+    // Update toggle state on load
+    if (savedLang === "en") {
+        toggle.checked = true;
+    } else if (savedLang === "gr") {
+        toggle.checked = false;
+    }
+
+    // On toggle change
+    toggle.addEventListener("change", function () {
+        if (this.checked) {
+            localStorage.setItem("lang", "en");
+            location.href = "index-en.html";
+        } else {
+            localStorage.setItem("lang", "gr");
+            location.href = "index.html";
+        }
+    });
+});
