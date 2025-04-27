@@ -1,9 +1,10 @@
 <!DOCTYPE html> <!--This informs the browser that this is an HTML document-->
 
-<html lang="en"> <!--start and end tag of HTML doc. language is English-->
+<html lang="el"> <!--start and end tag of HTML doc. language is English-->
 
 <head> <!--head tag contains meta information about the document-->
 <meta charset="UTF-8"> <!--"Unicode Transformation Format-8-bit" supports almost all characters and symbols from different languages-->
+<meta name="description" content="NeuroPodcast is a podcast about neuroscience."> <!--description of the page-->
 <meta name="keywords" content="Neuroscience, Podcast, NeuroPodcast, Vidcast, NeuroTeam"> <!--keywords for search engines-->
 <meta name="author" content="Anastasios Gratsakis"> <!--author of the page-->
 <meta name ="viewport" content="width=device-width, initial-scale=1"> <!--make the page look good on all screen sizes-->
@@ -14,35 +15,65 @@
 <style>
 
 </style> <!--inline CSS for styling the page-->
-<script src=""></script>
 
-<body style="background-color: #0e4877;"> <!--body tag contains the content of the document-->
-    <h1 style="color: white;">The NeuroPodcast</h1>
-    <hr/> <!--. This is a single tag that create a horizontal line to separate content-->
-    
-    <header> <!--header tag contains introductory content or navigational links-->
-        <nav id="nav-bar"> <!--nav tag is used to define a set of navigation links-->
-            <ul class="nav-links">
-                <li><a href="#Episodes" class="nav-link">Episodes</a></li>
-                <li><a href="#Members" class="nav-link">Members</a></li>
-                <li><a href="#About" class="nav-link">About</a></li>  
-            </ul>   
 
+<body> <!--body tag contains the content of the document-->
+
+    <!-- Header & Language Toggle -->
+    <div class="header">
+        <a href="index.html" class="logo-title">
+            <img src="logo/logo.png" alt="NeuroPodcast Logo">
+            <h1>The NeuroPodcast</h1>
+        </a>
+        <div class="lang-switch">
+            <input type="checkbox" id="toggle-lang"> 
+            <label for="toggle-lang">
+                <span class="label-gr">GR</span>
+                <span class="label-en">EN</span>
+                <span class="ball"></span> 
+            </label>
+        </div>
+    </div>
+    <hr/>
+
+    <header>
+        <nav id="nav-bar"> 
+            <ul class="nav-links"> 
+                <li><a href="episodes.html" class="nav-link">Επεισόδια</a></li> 
+                <li><a href="members.html" class="nav-link">Μέλη</a></li>
+                <li><a href="about.html" class="nav-link">Σχετικά</a></li>  
+            </ul>
         </nav>
-        
+        <hr/>
     </header>
 
+
     <main>
-        <p>Episodes</p>
-    
+        
     </main>
 
-    <footer>
+    <hr/>
+    <footer> <!--footer tag contains the footer content of the document-->
+        
+        <div class="footer">
+            <p>
+                Copyright &copy; 2025 NeuroPodcast. All rights reserved.
+            </p>
 
+            <p>
+                The NeuroPodcast is conducted under the auspices of the student group <a href="https://www.theneuroteamproject.com/" style="color: rgb(255, 255, 255)">Neuroteam</a> 
+                from the <i>Neuroanatomy</i> course of the Medical School at the <i>University of Crete</i> 
+                and the Neurosurgery Department of the University Hospital of Heraklion (PA.G.N.H.).
+            </p>
 
+            <p>
+                Contact us at: 
+                <a href="mailto:neuropodcast.neuroteam@gmail.com" style="color: white">neuropodcast.neuroteam@gmail.com</a>
+            </p>
+        </div>
     </footer>
 
-    <div class=""> 
+    <script src="script.js"></script> <!--linking the JavaScript file for interactivity-->
 </body>
 
 
