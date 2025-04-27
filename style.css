@@ -14,6 +14,14 @@ body {
     padding: 10px 20px; 
   } 
   
+  .logo-title {
+    display: flex; 
+    align-items: center;
+    gap: 10px; /* space between the logo and title */
+    margin: 0; /* remove default margin */ 
+    text-decoration: none; /* remove underline from links */
+  }
+
   /* Logo */    
   .header img { 
     height: 40px;
@@ -24,6 +32,7 @@ body {
     margin: 0;
     font-size: 1.5em;  
     color: white;
+    line-height: 1;
   }
 
   /* Language Switch */
@@ -92,7 +101,8 @@ body {
     display: flex; 
     gap: 20px; /* space between the links */
     padding: 0; 
-    margin: 10px 20px; 
+    margin: 10px 20px;
+    justify-content: center; /* center the links */ 
   }
   
   .nav-link {
@@ -104,9 +114,20 @@ body {
   }
   
   .nav-link:hover {
-    color: #a8d0ff;
+    color: #000000;
   }
   
+  .nav-link.activate {
+    color: #ffffff; /* color of the active link */
+    font-weight: bold; /* make the active link bold */
+    /* border-bottom: 2px solid #000000; underline the active link */
+    text-decoration: none; /* remove default underline */
+  }
+
+  .nav-link.active-page {
+    color: gray; /* color of the active link */
+  }
+
   /* Optional: style the horizontal line */
   hr {
     border: 0;
@@ -125,8 +146,138 @@ body {
     text-align: justify; 
   }
 
+  /* About.html */
+  main #NeuroPodcast_info h2 {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: justify; 
+    margin: 0px; /* remove default margin */
+  }
+
+  main #NeuroPodcast_info p {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: justify; 
+    margin: 0px;
+  }
+
+  main #Neuroteam_info h2 {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: justify;
+    margin: 0px; 
+  }
+
+  main #Neuroteam_info p {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: justify; 
+    margin: 0px; /* remove default margin */
+  }
+  .content-wrapper {
+    display: flex;
+    align-items: center; /* center vertically */
+    gap: 20px; /* spacing between text and logos */
+  }
+  
+  .text-block {
+    flex: 1; /* takes remaining space */
+    text-align: justify;
+  }
+  
+  .logo-column {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* space between logos */
+    align-items: center; /* center logos horizontally */
+  }
+  
+  .logo-column img {
+    width: 80px; /* or whatever fits your design */
+    height: auto;
+  }
+
+  .logo-column img.logo4 {
+    width: 150px;
+    height: auto;
+    gap: 0px;
+  }
+
+  .logo-column img.logo2 {
+    width: 120px;
+    height: auto;
+    gap: 10px; /* space between logos */
+  }
   footer {
     display: flex;
     text-align: center;
     padding: 20px;
+  }
+
+  .social-media {
+    display: flex;
+    gap: 15px; /* space between the icons */
+    justify-content: center; /* center the icons */
+    align-items: center; /* center the icons vertically */
+  }
+
+  .social-media a {
+    background-color: white;  /* white background for the icons */
+    border-radius: 50%; /* round shape */
+    height: 40px; /* size of the icon */
+    width: 40px; /* size of the icon */
+    display: flex; /* center the icon inside the circle */
+    justify-content: center; /* center the icon inside the circle */
+    align-items: center; /* center the icon inside the circle */
+    transition: : transform 0.2s ease; /* smooth transition for hover effect */
+    text-decoration: none; /* remove underline from links */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* shadow effect */
+  }
+
+  .social-media a svg{
+    height: 20px; /* size of the icon */
+    width: 20px; /* size of the icon */
+    fill: black; /* color of the icon */
+  }
+
+  .social-media a:hover svg{
+    fill: white; /* change icon color on hover */
+  }
+
+  .social-media a::before {
+    content: attr(data-social); /* text for screen readers */
+    position: absolute; /* position the text absolutely */
+    background-color: var(--accent-color); /* black background for the text */
+    color: white; /* white text color */
+    text-decoration: none; /* remove underline from text */
+    padding: 0.5em 1em; /* padding around the text */
+    border-radius: 100px; /* round shape */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* shadow effect */
+    transform: translateY(-30px) rotate(25deg); /* move the text up */
+    opacity: 0; /* hide the text initially */
+    transition: 200ms cubic-bezier(.42,0,.44,1.68); /* smooth transition for hover effect */
+  }
+
+  .social-media a:hover{
+    background-color: var(--accent-color); /* change background color on hover */
+  }
+
+  .social-media a::after {
+    content: ""; /* empty content for the arrow */
+    position: absolute; /* position the arrow absolutely */
+    height: 0; /* no height */
+    width: 0; /* no width */
+    border-left: 8px solid transparent; /* left arrow */
+    border-right: 8px solid transparent; /* right arrow */
+    border-top: 10px solid var(--accent-color); /* top arrow */
+    transform: translateY(0) rotate(25deg); /* move the arrow up */
+    opacity: 0; /* hide the arrow initially */
+    transition: 200ms cubic-bezier(.42,0,.44,1.68); /* smooth transition for hover effect */
+  }
+
+  .social-media a:hover::before {
+    opacity: 1; /* show the text on hover */
+    transform: translateY(-65px) rotate(0); /* move the text up */
+  }
+
+  .social-media a:hover::after {
+    opacity: 1; /* show the arrow on hover */
+    transform: translateY(-42px) rotate(0); /* move the arrow up */
   }
