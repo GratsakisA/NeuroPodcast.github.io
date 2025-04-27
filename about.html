@@ -1,0 +1,113 @@
+<!DOCTYPE html> <!--This informs the browser that this is an HTML document-->
+
+<html lang="el"> <!--start and end tag of HTML doc. language is English-->
+
+<head> <!--head tag contains meta information about the document-->
+<meta charset="UTF-8"> <!--"Unicode Transformation Format-8-bit" supports almost all characters and symbols from different languages-->
+<meta name="description" content="NeuroPodcast is a podcast about neuroscience."> <!--description of the page-->
+<meta name="keywords" content="Neuroscience, Podcast, NeuroPodcast, Vidcast, NeuroTeam"> <!--keywords for search engines-->
+<meta name="author" content="Anastasios Gratsakis"> <!--author of the page-->
+<meta name ="viewport" content="width=device-width, initial-scale=1"> <!--make the page look good on all screen sizes-->
+</head> <!--head tag ends here-->
+
+<title>NeuroPodcast</title> <!---proper page title-->
+<link rel="stylesheet" href="style.css"> <!--linking the CSS file-->
+<style>
+
+</style> <!--inline CSS for styling the page-->
+
+
+<body> <!--body tag contains the content of the document-->
+
+    <!-- Header & Language Toggle -->
+    <div class="header">
+        <a href="index.html" class="logo-title">
+            <img src="logo/logo.png" alt="NeuroPodcast Logo">
+            <h1>The NeuroPodcast</h1>
+        </a>
+        <div class="lang-switch">
+            <input type="checkbox" id="toggle-lang"> 
+            <label for="toggle-lang">
+                <span class="label-gr">GR</span>
+                <span class="label-en">EN</span>
+                <span class="ball"></span> 
+            </label>
+        </div>
+    </div>
+    <hr/>
+
+    <header>
+        <nav id="nav-bar"> 
+            <ul class="nav-links"> 
+                <li><a href="episodes.html" class="nav-link">Επεισόδια</a></li> 
+                <li><a href="members.html" class="nav-link">Μέλη</a></li>
+                <li><a href="about.html" class="nav-link">Σχετικά</a></li>  
+            </ul>
+        </nav>
+        <hr/>
+    </header>
+
+
+    <main>
+        <div class="content-wrapper">
+            <div class="text-block">
+                <section id="NeuroPodcast_info">
+                    <h2>Τι είναι το NeuroPodcast;</h2> 
+                    <p>
+                        Το NeuroPodcast είναι μια ιδέα από τα μαθητικά χρόνια. Μια εκπομπή που στόχο έχει να καλλιεργήσει το πάθος
+                        και το ενδιαφέρον πάνω στον τρόπο λειτουργίας του ανθρώπινου εγκεφάλου (και όχι μόνο!). Να διεγείρει ερωτήματα,
+                        σκέψεις και να ανοίξει τον δρόμο για μια διαφορετική οπτική της ανθρώπινης ύπαρξης. Βέβαια, όλα αυτά θα γίνουν
+                        στην βάση μιας επιστημονικής συζήτησης στα χνάρια της εκλαϊκευμένης επιστήμης και της κονστρουκτιβιστικής 
+                        προσέγγισης της γνώσης. Συνοδοιπόροι στο ταξίδι αυτό θα είναι διεκεκριμένοι επιστήμονες τόσο από το Πανεπιστήμιο 
+                        Κρήτης όσο και από άλλα πανεπιστήμια της Ελλάδας και του εξωτερικού.
+                    </p>
+                </section>
+
+                <section id="Neuroteam_info">
+                    <h2>Τι είναι η Neuroteam;</h2> 
+                    <p>
+                        Το NeuroPodcast είναι μια πρωτοβουλία της ομάδας Neuroteam, η οποία αποτελείται από φοιτητές του Ιατρικού 
+                        τμήματος του Πανεπιστημίου Κρήτης. Σκοπός της ομάδας είναι η προώθηση της νευροεπιστήμης και η εκλαΐκευση 
+                        της γνώσης γύρω από τον ανθρώπινο εγκέφαλο και το νευρικό σύστημα.
+                    </p>
+                </section>
+            </div>
+
+            <div class="logo-column">
+                <img src="logo/medical_logo.png"        alt="Logo 1">
+                <img src="logo/PAGNH_logo.png"          alt="Logo 2" class="logo2">
+                <img src="logo/UoC_logo.png"            alt="Logo 3">
+                <img src="logo/neuroteam2_logo.png"     alt="Logo 4" class="logo4">
+            </div>
+        </div>
+    </main>
+
+    <hr/>
+    <footer> <!--footer tag contains the footer content of the document-->
+        
+        <div class="footer">
+            <p>
+                Copyright &copy; 2025 NeuroPodcast. All rights reserved.
+            </p>
+
+            <p>
+                The NeuroPodcast is conducted under the auspices of the student group <a href="https://www.theneuroteamproject.com/" style="color: rgb(255, 255, 255)">Neuroteam</a> 
+                from the <i>Neuroanatomy</i> course of the Medical School at the <i>University of Crete</i> 
+                and the Neurosurgery Department of the University Hospital of Heraklion (PA.G.N.H.).
+            </p>
+
+            <p>
+                Contact us at: 
+                <a href="mailto:neuropodcast.neuroteam@gmail.com" style="color: white">neuropodcast.neuroteam@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> <!--linking the JavaScript file for interactivity-->
+</body>
+
+
+
+
+
+</html>
