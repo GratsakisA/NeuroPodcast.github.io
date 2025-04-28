@@ -96,13 +96,27 @@ body {
   }
 
   /* Navigation styling */
+  .navbar {
+    display: flex; 
+    justify-content: space-between; /* space between the links */
+    align-items: center; /* center vertically */
+    padding: 10px 20px; /* padding around the navbar */
+  }
+
+  .nav-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
   .nav-links {
     list-style: none; 
     display: flex; 
     gap: 20px; /* space between the links */
     padding: 0; 
     margin: 10px 20px;
-    justify-content: center; /* center the links */ 
+    justify-content: left; /* center the links */ 
   }
   
   .nav-link {
@@ -213,7 +227,7 @@ body {
 
   .social-media {
     display: flex;
-    gap: 15px; /* space between the icons */
+    gap: 10px; /* space between the icons */
     justify-content: center; /* center the icons */
     align-items: center; /* center the icons vertically */
   }
@@ -221,8 +235,8 @@ body {
   .social-media a {
     background-color: white;  /* white background for the icons */
     border-radius: 50%; /* round shape */
-    height: 40px; /* size of the icon */
-    width: 40px; /* size of the icon */
+    height: 30px; /* size of the icon */
+    width: 30px; /* size of the icon */
     display: flex; /* center the icon inside the circle */
     justify-content: center; /* center the icon inside the circle */
     align-items: center; /* center the icon inside the circle */
@@ -259,25 +273,104 @@ body {
     background-color: var(--accent-color); /* change background color on hover */
   }
 
-  .social-media a::after {
-    content: ""; /* empty content for the arrow */
-    position: absolute; /* position the arrow absolutely */
-    height: 0; /* no height */
-    width: 0; /* no width */
-    border-left: 8px solid transparent; /* left arrow */
-    border-right: 8px solid transparent; /* right arrow */
-    border-top: 10px solid var(--accent-color); /* top arrow */
-    transform: translateY(0) rotate(25deg); /* move the arrow up */
-    opacity: 0; /* hide the arrow initially */
-    transition: 200ms cubic-bezier(.42,0,.44,1.68); /* smooth transition for hover effect */
+  /* Style inputs with type="text", select elements and textareas */
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */ 
+    border: 1px solid #000000; /* Gray border */
+    border-radius: 20px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 10px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
 
-  .social-media a:hover::before {
-    opacity: 1; /* show the text on hover */
-    transform: translateY(-65px) rotate(0); /* move the text up */
+/* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04aaa2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
 
-  .social-media a:hover::after {
-    opacity: 1; /* show the arrow on hover */
-    transform: translateY(-42px) rotate(0); /* move the arrow up */
+/* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
   }
+
+/* Add a background color and some padding around the form */
+  .container {
+    border-radius: 50px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0 auto; /* Center the form */
+    margin-top: 20px; /* Space above the form */
+    margin-bottom: 20px; /* Space below the form */
+    max-width: 700px; /* Set a max width for the form */
+    max-height: fit-content; /* Set a max height for the form */
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 20px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .flip-card-front {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  .flip-card-front img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .flip-card-back {
+    background-color: #04aaa2;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+
