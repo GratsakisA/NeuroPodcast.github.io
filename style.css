@@ -1,0 +1,376 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0e4877;
+    color: white;
+  }
+  
+  /* Header container */
+  .header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;   /*left, right, center or justify*/ 
+    padding: 10px 20px; 
+  } 
+  
+  .logo-title {
+    display: flex; 
+    align-items: center;
+    gap: 10px; /* space between the logo and title */
+    margin: 0; /* remove default margin */ 
+    text-decoration: none; /* remove underline from links */
+  }
+
+  /* Logo */    
+  .header img { 
+    height: 40px;
+  }
+  
+  /* Title */
+  .header h1 {
+    margin: 0;
+    font-size: 1.5em;  
+    color: white;
+    line-height: 1;
+  }
+
+  /* Language Switch */
+  .lang-switch {
+    position: absolute;
+    display: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    align-items: center;
+  }
+  
+  .lang-switch input[type="checkbox"] {
+    display: none;
+  }
+  
+  .lang-switch label {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 30px;
+    padding: 0px 8px;
+    cursor: pointer;
+    position: relative;
+    width: 70px;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    height: 30px;
+    box-sizing: border-box;
+  }
+  
+  .lang-switch .ball {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 25px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+    z-index: 1;
+  }
+  
+  .lang-switch .label-gr,
+  .lang-switch .label-en {
+    width: 50%;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  #toggle-lang:checked + label .ball {
+    transform: translateX(35px);
+  }
+  
+  .label-gr,
+  .label-en {
+    z-index: 2;
+  }
+
+  /* Navigation styling */
+  .navbar {
+    display: flex; 
+    justify-content: space-between; /* space between the links */
+    align-items: center; /* center vertically */
+    padding: 10px 20px; /* padding around the navbar */
+  }
+
+  .nav-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    list-style: none; 
+    display: flex; 
+    gap: 20px; /* space between the links */
+    padding: 0; 
+    margin: 10px 20px;
+    justify-content: left; /* center the links */ 
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em; /* size of the text */
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #000000;
+  }
+  
+  .nav-link.activate {
+    color: #ffffff; /* color of the active link */
+    font-weight: bold; /* make the active link bold */
+    /* border-bottom: 2px solid #000000; underline the active link */
+    text-decoration: none; /* remove default underline */
+  }
+
+  .nav-link.active-page {
+    color: gray; /* color of the active link */
+  }
+
+  /* Optional: style the horizontal line */
+  hr {
+    border: 0;
+    height: 1px;
+    background: white;
+    margin: 0 20px;
+  }
+  
+  main #welcome h2 {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: center; 
+  }
+
+  main #welcome p {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: justify; 
+  }
+
+  /* About.html */
+  main #NeuroPodcast_info h2 {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: justify; 
+    margin: 0px; /* remove default margin */
+  }
+
+  main #NeuroPodcast_info p {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: justify; 
+    margin: 0px;
+  }
+
+  main #Neuroteam_info h2 {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: justify;
+    margin: 0px; 
+  }
+
+  main #Neuroteam_info p {
+    padding: 20px; /* the space between the content and its border (or edge of the box it's in) */
+    text-align: justify; 
+    margin: 0px; /* remove default margin */
+  }
+  .content-wrapper {
+    display: flex;
+    align-items: center; /* center vertically */
+    gap: 20px; /* spacing between text and logos */
+  }
+  
+  .text-block {
+    flex: 1; /* takes remaining space */
+    text-align: justify;
+  }
+  
+  .logo-column {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* space between logos */
+    align-items: center; /* center logos horizontally */
+  }
+  
+  .logo-column img {
+    width: 80px; /* or whatever fits your design */
+    height: auto;
+  }
+
+  .logo-column img.logo4 {
+    width: 150px;
+    height: auto;
+    gap: 0px;
+  }
+
+  .logo-column img.logo2 {
+    width: 120px;
+    height: auto;
+    gap: 10px; /* space between logos */
+  }
+  footer {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .social-media {
+    display: flex;
+    gap: 10px; /* space between the icons */
+    justify-content: center; /* center the icons */
+    align-items: center; /* center the icons vertically */
+  }
+
+  .social-media a {
+    background-color: white;  /* white background for the icons */
+    border-radius: 50%; /* round shape */
+    height: 30px; /* size of the icon */
+    width: 30px; /* size of the icon */
+    display: flex; /* center the icon inside the circle */
+    justify-content: center; /* center the icon inside the circle */
+    align-items: center; /* center the icon inside the circle */
+    transition: : transform 0.2s ease; /* smooth transition for hover effect */
+    text-decoration: none; /* remove underline from links */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* shadow effect */
+  }
+
+  .social-media a svg{
+    height: 20px; /* size of the icon */
+    width: 20px; /* size of the icon */
+    fill: black; /* color of the icon */
+  }
+
+  .social-media a:hover svg{
+    fill: white; /* change icon color on hover */
+  }
+
+  .social-media a::before {
+    content: attr(data-social); /* text for screen readers */
+    position: absolute; /* position the text absolutely */
+    background-color: var(--accent-color); /* black background for the text */
+    color: white; /* white text color */
+    text-decoration: none; /* remove underline from text */
+    padding: 0.5em 1em; /* padding around the text */
+    border-radius: 100px; /* round shape */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* shadow effect */
+    transform: translateY(-30px) rotate(25deg); /* move the text up */
+    opacity: 0; /* hide the text initially */
+    transition: 200ms cubic-bezier(.42,0,.44,1.68); /* smooth transition for hover effect */
+  }
+
+  .social-media a:hover{
+    background-color: var(--accent-color); /* change background color on hover */
+  }
+
+  /* Style inputs with type="text", select elements and textareas */
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */ 
+    border: 1px solid #000000; /* Gray border */
+    border-radius: 20px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 10px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+/* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04aaa2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+/* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+/* Add a background color and some padding around the form */
+  .container {
+    border-radius: 50px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0 auto; /* Center the form */
+    margin-top: 20px; /* Space above the form */
+    margin-bottom: 20px; /* Space below the form */
+    max-width: 700px; /* Set a max width for the form */
+    max-height: fit-content; /* Set a max height for the form */
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 20px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .flip-card-front {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  .flip-card-front img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .flip-card-back {
+    background-color: #04aaa2;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+
