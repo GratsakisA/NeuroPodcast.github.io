@@ -8,4 +8,5 @@ This folder "NeuroPodcast" consists of 7 files:
 
 * style.css (about the style)
 
-Visit the website: (The NeuroPodcast)[https://gratsakisa.github.io/NeuroPodcast.github.io/]
+Visit the website: [The NeuroPodcast](https://gratsakisa.github.io/NeuroPodcast.github.io/)
+
