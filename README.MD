@@ -5,4 +5,7 @@ This folder "NeuroPodcast" consists of 7 files:
 * episodes.html
 * members.html
 * script.js
+
 * style.css (about the style)
+
+Visit the website: (The NeuroPodcast)[https://gratsakisa.github.io/NeuroPodcast.github.io/]
